@@ -1,10 +1,16 @@
-# electron-es6-react
+# RESS Desktop
 
-A simple boilerplate app to demonstrate how to use [ES6] and [React] with
-[Electron]. It uses [Babel] to automatically transpile ES6 and JSX code,
-without depending on any package manager besides `npm`.
+Built on ES6, React, Electron and Babel with `npm`.
 
-## How?
+## Interfaces
+1. School Registry
+2. Accountant
+3. Librarian
+4. Tutor
+5. Manager
+6. Student
+
+### How?
 
 The Node and Electron binaries both take a parameter `-r` that automatically
 requires a module before the rest of the code.  The `npm start` script is
