@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Main from '../views/main.jsx';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo'
+import { BrowserRouter } from 'react-router-dom';
 
 window.onload = function(){
 
@@ -12,7 +13,9 @@ window.onload = function(){
 
   ReactDOM.render(
     <ApolloProvider client={ client }>
-      <Main />
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
     </ApolloProvider>
     , document.getElementById('app')
     );
