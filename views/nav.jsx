@@ -6,34 +6,34 @@ class Nav extends Component {
     render() {
         return(<div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Parents </Link>
+                <Link to='/' className="f4 fw6 db white link hover-red">Parents </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Students </Link>
+                <Link to='/students' className="f4 fw6 db white link hover-red">Students </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Depatments </Link>
+                <Link to='/depts' className="f4 fw6 db white link hover-red">Depatments </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Subjects </Link>
+                <Link to='/subjects' className="f4 fw6 db white link hover-red">Subjects </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Grades </Link>
+                <Link to='/grades' className="f4 fw6 db white link hover-red">Grades </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Lessons </Link>
+                <Link to='/' className="f4 fw6 db white link hover-red">Lessons </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">TimeTable </Link>
+                <Link to='/' className="f4 fw6 db white link hover-red">TimeTable </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Books </Link>
+                <Link to='/' className="f4 fw6 db white link hover-red">Books </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">Lends </Link>
+                <Link to='/' className="f4 fw6 db white link hover-red">Lends </Link>
             </div>
             <div className="pa1 lh-copy">
-                <Link to='/new' className="f4 fw7 dib pa2 no-underline bg-animate bg-white hover-bg-light-blue black">New Parent</Link>
+                <Link to='/new' className="f4 fw6 db white link hover-red">New Parent</Link>
             </div>
             </div>
         )
