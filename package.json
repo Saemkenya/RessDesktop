@@ -10,6 +10,7 @@
   "dependencies": {
     "apollo-boost": "^0.1.23",
     "apollo-client": "2.3.8",
+    "apollo-link-retry": "^2.2.8",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-register": "^6.3.13",
