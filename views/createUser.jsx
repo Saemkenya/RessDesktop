@@ -6,20 +6,19 @@ class CreateUser extends Component {
     constructor () {
         super()
         this.state = {
-        Salute:          '',
-        Name:            '',
-        Email:           '',
-        Password:        '',
-        IDno:            '',
-        NHIFno:          '',
-        Cell:            '',
-        Email:           '',
-        School:          '',
-        AddrPoBox:       '',
-        AddrPostalCode:  '',
-        AddrTown:        '',
-        AddrCounty:      '',
-        AddrNationality: '',
+        email:            '',
+        password:         '',
+        salute:           '',
+        name:             '',
+        IDno:             '',
+        NHIFno:           '',
+        cell:             '',
+        school:           '',
+        addr_poBox:       '',
+        addr_postalCode:  '',
+        addr_town:        '',
+        addr_county:      '',
+        addr_nationality: '',
         }
         this._createUser = this._createUser.bind(this);
         
@@ -39,10 +38,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="salute"  
                                 id="user-salute" 
-                                value={ this.state.Salute }
+                                value={ this.state.salute }
                                 placeholder="Salute ..."
                                 onChange={ (e) => this.setState({
-                                    Salute: e.target.value
+                                    salute: e.target.value
                                 }) }/>
                         </div>
 
@@ -52,10 +51,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="name"  
                                 id="full-names" 
-                                value={ this.state.Name }
+                                value={ this.state.name }
                                 placeholder="Full Names ..."
                                 onChange={ (e) => this.setState({
-                                    Name: e.target.value
+                                    name: e.target.value
                                 }) }/>
                         </div>
 
@@ -65,10 +64,10 @@ class CreateUser extends Component {
                                 type="email" 
                                 name="email-address"  
                                 id="email-address" 
-                                value={ this.state.Email }
+                                value={ this.state.email }
                                 placeholder="Email address ..."
                                 onChange={ (e) => this.setState({
-                                    Email: e.target.value
+                                    email: e.target.value
                                 }) }/>
                         </div>
 
@@ -78,10 +77,10 @@ class CreateUser extends Component {
                                 type="password" 
                                 name="password"  
                                 id="user-password" 
-                                value={ this.state.Password }
+                                value={ this.state.password }
                                 placeholder="Password ..."
                                 onChange={ (e) => this.setState({
-                                    Password: e.target.value
+                                    password: e.target.value
                                 }) }/>
                         </div>
 
@@ -117,10 +116,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="cell Number"  
                                 id="cell" 
-                                value={ this.state.Cell }
+                                value={ this.state.cell }
                                 placeholder="Cell phone Number ..."
                                 onChange={ (e) => this.setState({
-                                    Cell: e.target.value
+                                    cell: e.target.value
                                 }) }/>
                         </div>
 
@@ -130,10 +129,10 @@ class CreateUser extends Component {
                                 type="email" 
                                 name="school Email"  
                                 id="school" 
-                                value={ this.state.School }
+                                value={ this.state.school }
                                 placeholder="school email address ..."
                                 onChange={ (e) => this.setState({
-                                    School: e.target.value
+                                    school: e.target.value
                                 }) }/>
                         </div>
 
@@ -143,10 +142,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="P.O. Box"  
                                 id="AddrPoBox" 
-                                value={ this.state.AddrPoBox }
+                                value={ this.state.addr_poBox }
                                 placeholder="P.O. Box number ..."
                                 onChange={ (e) => this.setState({
-                                    AddrPoBox: e.target.value
+                                    addr_poBox: e.target.value
                                 }) }/>
                         </div>
 
@@ -156,10 +155,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="Postal Code"  
                                 id="AddrPostalCode" 
-                                value={ this.state.AddrPostalCode }
+                                value={ this.state.addr_postalCode }
                                 placeholder="Postal code ..."
                                 onChange={ (e) => this.setState({
-                                    AddrPostalCode: e.target.value
+                                    addr_postalCode: e.target.value
                                 }) }/>
                         </div>
 
@@ -169,10 +168,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="Postal Town"  
                                 id="AddrTown" 
-                                value={ this.state.AddrTown }
+                                value={ this.state.addr_town }
                                 placeholder="Town ..."
                                 onChange={ (e) => this.setState({
-                                    AddrTown: e.target.value
+                                    addr_town: e.target.value
                                 }) }/>
                         </div>
 
@@ -182,10 +181,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="County"  
                                 id="AddrCounty" 
-                                value={ this.state.AddrCounty }
+                                value={ this.state.addr_county }
                                 placeholder="County ..."
                                 onChange={ (e) => this.setState({
-                                    AddrCounty: e.target.value
+                                    addr_county: e.target.value
                                 }) }/>
                         </div>
 
@@ -195,10 +194,10 @@ class CreateUser extends Component {
                                 type="text" 
                                 name="Nationality"  
                                 id="AddrNationality" 
-                                value={ this.state.AddrNationality }
+                                value={ this.state.addr_nationality }
                                 placeholder="Nationality ..."
                                 onChange={ (e) => this.setState({
-                                    AddrNationality: e.target.value
+                                    addr_nationality: e.target.value
                                 }) }/>
                         </div>
 
@@ -214,35 +213,37 @@ class CreateUser extends Component {
             </div>
         )
     }
-    _createUser() {
+    async _createUser() {
         const { 
-            Salute, 
-            Name,
+            email,          
+            password, 
+            salute,
+            name,
             IDno,
             NHIFno,
-            Cell,
-            Email,
-            School,
-            AddrPoBox,
-            AddrPostalCode,
-            AddrTown,
-            AddrCounty,
-            AddrNationality 
+            cell,
+            school,
+            addr_poBox,
+            addr_postalCode,
+            addr_town,
+            addr_county,
+            addr_nationality 
         } = this.state;
-        this.props.createUserMutation({
+        await this.props.createUserMutation({
             variables: {
-                Salute, 
-                Name,
+                email,
+                password, 
+                salute,
+                name,
                 IDno,
                 NHIFno,
-                Cell,
-                Email,
-                School,
-                AddrPoBox,
-                AddrPostalCode,
-                AddrTown,
-                AddrCounty,
-                AddrNationality
+                cell,
+                school,
+                addr_poBox,
+                addr_postalCode,
+                addr_town,
+                addr_county,
+                addr_nationality
             }
         })
     }
@@ -258,11 +259,11 @@ const CREATE_USER_MUTATION = gql`
         $NHIFno: String!,
         $cell: String!,
         $school: String!,
-        $AddrPoBox: String!,
-        $AddrPostalCode: String!,
-        $AddrTown: String!,
-        $AddrCounty: String!,
-        $AddrNationality: String!,
+        $addr_poBox: String!,
+        $addr_postalCode: String!,
+        $addr_town: String!,
+        $addr_county: String!,
+        $addr_nationality: String!,
     ){
     addUser(
         email:  $email,
@@ -273,11 +274,11 @@ const CREATE_USER_MUTATION = gql`
         NHIFno:  $NHIFno,
         cell:  $cell,
         school:  $school,
-        addr_poBox:  $AddrPoBox,
-        addr_postalCode:  $AddrPostalCode,
-        addr_town:  $AddrTown,
-        addr_county: $AddrCounty,
-        addr_nationality: $AddrNationality
+        addr_poBox:  $addr_poBox,
+        addr_postalCode:  $addr_postalCode,
+        addr_town:  $addr_town,
+        addr_county: $addr_county,
+        addr_nationality: $addr_nationality
     ){
         id
         salute

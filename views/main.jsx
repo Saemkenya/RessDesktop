@@ -5,6 +5,10 @@ import { Switch, Route } from "react-router-dom";
 import Nav from "./nav";
 import UserList from './userList';
 import CreateUser from './createUser';
+import studentList from './studentList';
+import deptList from './deptList';
+import subjectList from './subjectList';
+import gradeList from './gradeList';
 
 class Main extends React.Component {
   render() {
@@ -21,6 +25,10 @@ class Main extends React.Component {
               <Switch>
                 <Route exact path='/' component={ UserList }/>
                 <Route exact path='/new' component={ CreateUser }/>
+                <Route exact path='/students' component={ studentList }/>
+                <Route exact path='/depts' component={ deptList }/>
+                <Route exact path='/subjects' component={ subjectList }/>
+                <Route exact path='/grades' component={ gradeList }/>                
               </Switch>
             </div>
           </div>
