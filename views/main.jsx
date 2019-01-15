@@ -16,6 +16,7 @@ import examList from './examList';
 import scoreList from './scoreList';
 import feeList from './feeList';
 import paymentList from './paymentList';
+import UserLogin from "./login";
 
 class Main extends React.Component {
   render() {
@@ -43,6 +44,7 @@ class Main extends React.Component {
                 <Route exact path='/scores' component={ scoreList }/>                
                 <Route exact path='/fees' component={ feeList }/>                
                 <Route exact path='/payments' component={ paymentList }/>                
+                <Route exact path='/login' component={ UserLogin }/>                
               </Switch>
             </div>
           </div>
