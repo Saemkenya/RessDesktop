@@ -6,6 +6,9 @@ class Nav extends Component {
     render() {
         return(<div>
             <div className="pa1 lh-copy">
+                <Link to='/login' className="f4 fw6 db white link hover-red">Sign In</Link>
+            </div>
+            <div className="pa1 lh-copy">
                 <Link to='/' className="f4 fw6 db white link hover-red">Parents </Link>
             </div>
             <div className="pa1 lh-copy">
