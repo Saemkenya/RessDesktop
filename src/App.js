@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { ApolloProvider } from "react-apollo";
 import apolloClient from "./apolloClient";
-import TokenForm from "./TokenForm";
-import SchoolParents from "./SchoolParents";
+import LoginForm from "./LoginForm";
+import School from "./School";
+import { BrowserRouter } from "react-router-dom";
 
 class App extends Component {
   state = {
-    token: null
+    token: null,
   };
 
   componentDidMount() {
@@ -23,8 +24,9 @@ class App extends Component {
 
     return (
       <ApolloProvider client={apolloClient}>
-        <h1>School Parents</h1>
-        {token ? <SchoolParents /> : <TokenForm setToken={this.setToken} />}
+      <BrowserRouter>
+        {token ? <School /> : <LoginForm setToken={this.setToken} />}
+        </BrowserRouter>
       </ApolloProvider>
     );
   }
