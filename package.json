@@ -18,7 +18,10 @@
     "react": "^16.5.2",
     "react-apollo": "^2.2.4",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "dev": "nf start",
@@ -27,7 +30,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "ebuild":"yarn build && node_modules/.bin/build"
+    "ebuild": "yarn build && node_modules/.bin/build"
   },
   "description": "Ress desktop portal",
   "homepage": "./",
@@ -42,8 +45,8 @@
     ]
   },
   "devDependencies": {
-    "electron-builder": "@20.38.5",
     "electron": "^4.0.1",
+    "electron-builder": "@20.38.5",
     "foreman": "^3.0.1"
   },
   "eslintConfig": {
