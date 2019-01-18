@@ -19,7 +19,10 @@ const Parent = ({
   <div className="mw6 center">
     <article className="dt w-100 bb b--black-05 pb2 mt2" href="#0">
       <div className="dtc w2 w3-ns v-mid">
-        <img src="http://localhost:18700/static/logo.gif" className="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"/>
+        <img src="http://localhost:18700/static/logor.gif" 
+          className="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+          alt="parent-avatar"
+        />
       </div>
       <div className="dtc v-mid pl3">
         <h1 className="f6 f5-ns fw6 lh-title white mv0">{salute +" "+ name} </h1>
