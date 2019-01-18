@@ -15,7 +15,14 @@ const SchoolName = ({
 }) => (<div>
     <section className="v-top">
         <article className="mw8 v-top center br2 ba b--light-blue bg-lightest-blue">
-            <div className="dt-ns dt--fixed-ns w-100">
+        <div className="dt-ns dt--fixed-ns w-100">
+        
+        <div className="dtc w2 w3-ns v-mid">
+        <img src="http://localhost:18700/static/logo.gif" 
+            className="ba b--black-10 db br2 w2 w3-ns h2 h3-ns"
+            alt="student avatar"/>
+      </div>
+
             <div className="dtc-ns v-mid">
                 <div>
                 <h2 className="fw4 blue mt0 mb3">{name}</h2>

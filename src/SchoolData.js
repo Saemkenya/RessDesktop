@@ -28,7 +28,7 @@ export default class SchoolData extends React.Component {
             if (loading) {
               return <span>Loading...</span>;
             }
-            console.log(data)
+            // console.log(data)
             return (
               <SchoolName data={data.school} key={data.school.id} />
             );
