@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom'
 import SchoolParents from './ParentData'
 import 'tachyons'
 import Nav from './Nav'
-import LoginForm from './LoginForm'
 import SchoolData from './SchoolData'
 import StudentData from './StudentData'
 import DepartmentData from './DepartmentData'
@@ -29,6 +28,8 @@ import NewPayment from './NewPayment'
 import NewExam from './NewExam'
 import NewScore from './NewScore'
 import { Link } from 'react-router-dom'
+import SignIn from './SignInForm'
+import SignInData from './SigInData'
 
 export default class School extends Component {
   render () {
@@ -46,7 +47,7 @@ export default class School extends Component {
           <div className='dtc w-80 tc pv4 white bg-black-70'>
             <Switch>
               <Route exact path='/parents' component={SchoolParents} />
-              <Route exact path='/login' component={LoginForm} />
+              <Route exact path='/login' component={SignIn} />
               <Route exact path='/students' component={StudentData} />
               <Route exact path='/depts' component={DepartmentData} />
               <Route exact path='/subjects' component={SubjectData} />
@@ -70,21 +71,19 @@ export default class School extends Component {
               <Route exact path='/newPay' component={NewPayment} />
               <Route exact path='/newExam' component={NewExam} />
               <Route exact path='/newScore' component={NewScore} />
+              <Route exact path='/logout' component={SignInData} />
             </Switch>
           </div>
         </div>
         <div className='dt dt--fixed h-25'>
           <div className='dtc tc pv4 bg-black-10 lh-1'>
             <div className='pa1 lh-copy'>
-              <Link to='/login' className='f4 fw6 db white link hover-red'>
-                Logout{' '}
+              <Link to='/logout' className='f4 fw6 db white link hover-red'>
+                Sign Out: {this.props.email}
               </Link>
             </div>
           </div>
-          <div className='dtc tc pv4 bg-black-05 lh-1'>Status: Connected to RESS</div>
-          <div className='dtc tc pv4 bg-black-10 lh-1'>Role: Registrar</div>
-          <div className='dtc tc pv4 bg-black-05 lh-1'>Task: Idle</div>
-          <div className='dtc tc pv4 bg-black-10 lh-1'>Time: 12:00 noon</div>
+          <div className='dtc tc pv4 bg-black-10 lh-1'>Roles: {this.props.roles.map(role => '  ' + role)}</div>
         </div>
       </div>
     )

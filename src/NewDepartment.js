@@ -38,7 +38,7 @@ export default class NewDepartment extends React.Component {
     return (
       <div>
           <article className="pa4 black-80">
-        <label className="db fw4 lh-copy white f6" htmlFor="new-user-title">New Student Info</label>
+        <label className="db fw4 lh-copy white f6" htmlFor="new-user-title">New Department Info</label>
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
             <legend className="ph0 mh0 fw6 clip">Department</legend>
 
