@@ -15,7 +15,7 @@ const Subject = ({
         />
       </div>
       <div className="dtc v-mid pl3">
-        <h1 className="f6 f5-ns fw6 lh-title white mv0">{name} </h1>
+        <h1 className="f6 f5-ns fw6 lh-title white mv0"> {name} </h1>
         <small>
             <em>Tutors: {departments.edges.map(node => node.node.tutors.edges.map(node => node.node.name))}</em>
         </small>

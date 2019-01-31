@@ -21,7 +21,8 @@ class App extends Component {
     gdnRole: null,
     libRole: null,
     mngRole: null,
-    tutRole: null
+    tutRole: null,
+    regRole: null
   }
 
   handleSignIn = event => {
@@ -59,7 +60,6 @@ class App extends Component {
   }
   getRoles = () => {
     let roles = this.state
-    console.log(roles)
     return roles.map(role => role.contains('true'))
   }
 
@@ -70,22 +70,23 @@ class App extends Component {
       Guardian: this.state.gdnRole,
       Librarian: this.state.libRole,
       Manager: this.state.mngRole,
-      Tutor: this.state.tutRole
+      Tutor: this.state.tutRole,
+      Registrar: this.state.regRole
     }
+
     let finalRoles = []
+    let dumpRoles = []
     for (var key in roles) {
       var value = roles[key]
-      console.log(value)
 
-      value ? finalRoles.push(key) : console.log(value)
+      value ? finalRoles.push(key) : dumpRoles.push(value)
     }
-    console.log(finalRoles)
     return finalRoles
   }
 
   render () {
     const { token } = this.state
-    this.rendeRoles()
+    // this.rendeRoles()
     return (
       <ApolloProvider client={apolloClient}>
         <BrowserRouter>
@@ -100,7 +101,6 @@ class App extends Component {
               onPasswordUpdate={this.handlePasswordUpdate}
             />
           )}
-          {/* <LoginForm setToken={this.setToken} />} */}
         </BrowserRouter>
       </ApolloProvider>
     )
@@ -125,7 +125,6 @@ class App extends Component {
           console.log(error.message)
         }
       )
-      // .then(data => data.map(item => console.log(item)))
       .then(data => new TextDecoder('utf-8').decode(data.value))
       .then(newString => this.saveUserData(newString))
   }
@@ -150,10 +149,11 @@ class App extends Component {
       gdnRole: this.setRole(items[6]),
       libRole: this.setRole(items[7]),
       mngRole: this.setRole(items[8]),
-      tutRole: this.setRole(items[9]),
-      token: items[10].slice(1, -1)
+      tutRole: this.setRole(items[10]),
+      regRole: this.setRole(items[9]),
+      token: items[11].slice(1, -1)
     })
-    this.setToken(items[10].slice(1, -1))
+    this.setToken(items[11].slice(1, -1))
   }
   setRole = roleString => {
     if (roleString.includes('true')) {
