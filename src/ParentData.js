@@ -44,6 +44,18 @@ export default class SchoolParents extends React.Component {
     return (
       <div>
         <div className='dtc v-mid pl3'>
+          <h1 className='f6 f5-ns fw6 lh-title white mv0'>Payments </h1>
+        </div>
+
+        <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+          {({ data, loading }) => {
+            if (loading) {
+              return <span>Loading...</span>
+            }
+            return <ParentPayment data={data.school.users.edges} />
+          }}
+        </Query>
+        <div className='dtc v-mid pl3'>
           <h1 className='f6 f5-ns fw6 lh-title white mv0'>Students </h1>
         </div>
 
@@ -53,15 +65,6 @@ export default class SchoolParents extends React.Component {
               return <span>Loading...</span>
             }
             return <Parent data={data.school.users.edges} />
-          }}
-        </Query>
-
-        <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
-          {({ data, loading }) => {
-            if (loading) {
-              return <span>Loading...</span>
-            }
-            return <ParentPayment data={data.school.users.edges} />
           }}
         </Query>
       </div>
