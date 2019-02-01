@@ -17,11 +17,6 @@ class Nav extends Component {
           </Link>
         </div>
         <div className='pa1 lh-copy'>
-          <Link to='/depts' className='f4 fw6 db white link hover-red'>
-            Depts{' '}
-          </Link>
-        </div>
-        <div className='pa1 lh-copy'>
           <Link to='/subjects' className='f4 fw6 db white link hover-red'>
             Subs{' '}
           </Link>
