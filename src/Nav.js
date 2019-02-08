@@ -1,67 +1,59 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
+import './static/Style.css'
 
 class Nav extends Component {
   render () {
     const result = (
-      <div>
-        <div className='pa1 lh-copy'>
-          <Link to='/parents' className='f4 fw6 db white link hover-red'>
-            Prts{' '}
+      <Fragment>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/parents' style={{ textDecoration: 'none' }}>
+            Parents
           </Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/students' className='f4 fw6 db white link hover-red'>
-            Stds{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/students'>Students</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/subjects' className='f4 fw6 db white link hover-red'>
-            Subs{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/subjects'>Subjects</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/grades' className='f4 fw6 db white link hover-red'>
-            Grds{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/grades'>Grades</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/lessons' className='f4 fw6 db white link hover-red'>
-            Lssn{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/lessons'>Lessons</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/tts' className='f4 fw6 db white link hover-red'>
-            TT{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/tts'>Timetable</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/books' className='f4 fw6 db white link hover-red'>
-            Bks{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/books'>Books</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/fees' className='f4 fw6 db white link hover-red'>
-            FStr{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/fees'>FeeStructure</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/payments' className='f4 fw6 db white link hover-red'>
-            Pays{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/payments'>Payments</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/exams' className='f4 fw6 db white link hover-red'>
-            Exms{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/exams'>Examinations</Link>
         </div>
-        <div className='pa1 lh-copy'>
-          <Link to='/scores' className='f4 fw6 db white link hover-red'>
-            Scos{' '}
-          </Link>
+        <div>
+          <img src='http://localhost:18700/static/logor.gif' alt='icon' />
+          <Link to='/scores'>Scores</Link>
         </div>
-      </div>
+      </Fragment>
     )
     return result
   }

@@ -13,7 +13,7 @@ included with a `bearer` authorization flag. Apollo client is heavily used for t
 4. Tutor
 5. Manager
 6. Student
-
+ 
 ### Application
 
 Uses react-apollo to interact with the RESS graphql backend
