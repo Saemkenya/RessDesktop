@@ -38,10 +38,10 @@ export default class ParentPayment extends Component {
       <Fragment>
         <Bar
           data={this.state.graphData}
-          height={100}
+          height={50}
           width={50}
           options={{
-            maintainAspectRatio: false
+            maintainAspectRatio: true
           }}
         />
         {/* <div>{this.props.data.users.edges[0].node.amount}</div> */}

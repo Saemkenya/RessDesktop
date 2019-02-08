@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { ApolloProvider } from 'react-apollo'
 import apolloClient from './apolloClient'
-import School from './School'
+// import School from './School'
 import { BrowserRouter } from 'react-router-dom'
 import SignIn from './SignInForm'
-import './App.css'
+// import './App.css'
+import './static/Style.css'
 import CryptoJS from 'crypto-js'
+import Main from './components/main'
 
 class App extends Component {
   state = {
@@ -91,7 +93,7 @@ class App extends Component {
       <ApolloProvider client={apolloClient}>
         <BrowserRouter>
           {token ? (
-            <School email={this.state.email} roles={this.rendeRoles()} />
+            <Main roles={this.rendeRoles()} email={this.state.email} />
           ) : (
             <SignIn
               onSignIn={this.handleSignIn}

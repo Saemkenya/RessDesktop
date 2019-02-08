@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Bar } from 'react-chartjs-2'
 
 const data = {
@@ -16,16 +16,18 @@ const data = {
   ]
 }
 const ScoreGraph = () => (
-  <div>
-    <h2>Grade Three Average Scores</h2>
-    <Bar
-      data={data}
-      width={100}
-      height={50}
-      options={{
-        maintainAspectRatio: true
-      }}
-    />
-  </div>
+  <Fragment>
+    <div>Grade Three Average Scores</div>
+    <div>
+      <Bar
+        data={data}
+        width={100}
+        height={50}
+        options={{
+          maintainAspectRatio: true
+        }}
+      />
+    </div>
+  </Fragment>
 )
 export default ScoreGraph
