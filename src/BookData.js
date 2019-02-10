@@ -3,6 +3,7 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Book from './Book';
 import { Link } from 'react-router-dom';
+import BookGraph from './BookGraph';
 
 const SCHOOL_BOOKS_QUERY = gql`
   query schoolBooks($email: String!) {
@@ -36,7 +37,7 @@ export default class BookData extends React.Component {
   render() {
     return (
       <div>
-
+<BookGraph />
         <article className="dt w-100 bb b--black-05 pb2 mt2" href="#0">
           <div className="dtc w2 w3-ns v-mid">
               <img src="http://localhost:18700/static/logor.gif" 

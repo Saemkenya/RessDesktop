@@ -8,8 +8,6 @@ import ParentTable from './ParentTable'
 import StudentTable from './StudentTable'
 import DeptGraph from '../DeptsGraph'
 import GradeTable from './GradeTable'
-import LessonGraph from '../LessonGraph'
-import TtGraph from '../TtGraph'
 import BookGraph from '../BookGraph'
 import FeeTable from './FeeTable'
 import ExamTable from './ExamTable'
@@ -41,6 +39,9 @@ import ExamData from '../ExamData'
 import ScoreData from '../ScoreData'
 import SignInData from '../SigInData'
 import Footer from './Footer'
+import LessonTable from './LessonTable'
+import TimeTable from './Tt'
+import BookTable from './BookTable';
 
 class Main extends Component {
   render () {
@@ -60,9 +61,9 @@ class Main extends Component {
               <Route exact path='/students' component={StudentTable} />
               <Route exact path='/depts' component={DeptGraph} />
               <Route exact path='/grades' component={GradeTable} />
-              <Route exact path='/lessons' component={LessonGraph} />
-              <Route exact path='/tts' component={TtGraph} />
-              <Route exact path='/books' component={BookGraph} />
+              <Route exact path='/lessons' component={LessonTable} />
+              <Route exact path='/tts' component={TimeTable} />
+              <Route exact path='/books' component={BookTable} />
               <Route exact path='/fees' component={FeeTable} />
               <Route exact path='/exams' component={ExamTable} />
               <Route exact path='/subjects' component={SubjectTable} />
@@ -81,9 +82,6 @@ class Main extends Component {
             </Switch>
           </div>
           <div className='body-details-right'>
-            Current Item
-            <div>Graphical Representation</div>
-            <div>List from selected item</div>
             <Switch>
               <Route exact path='/parents' component={SchoolParents} />
               <Route exact path='/login' component={SignIn} />
