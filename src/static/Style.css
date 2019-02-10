@@ -32,7 +32,8 @@
 	grid-template-columns: repeat(1, 1fr);
 	background-color: gray;
 }
-.body-side-menu img {
+.body-side-menu img,
+img {
 	height: 25px;
 	margin: 1px 20px 1px 10px;
 }
@@ -68,6 +69,7 @@ table {
 	margin: auto;
 	text-align: center;
 	table-layout: fixed;
+	overflow: hidden;
 }
 table,
 tr,
@@ -81,10 +83,11 @@ td {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	background: linear-gradient(top, #3c3c3c 0%, #222 100%);
 	background: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+	overflow: hidden;
 }
 th,
 td:hover {
-	background: #39ace7;
+	background: #c4d5dd;
 	text-decoration-color: #ccc;
 }
 th {

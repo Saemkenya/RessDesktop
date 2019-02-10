@@ -109,6 +109,25 @@ class App extends Component {
   }
 
   getUser = basicBase64 => {
+    const restartLogin = () => {
+      this.setState = {
+        token: null,
+        email: '',
+        password: '',
+
+        response: null,
+        salute: null,
+        name: null,
+        accRole: null,
+        admRole: null,
+        gdnRole: null,
+        libRole: null,
+        mngRole: null,
+        tutRole: null,
+        regRole: null
+      }
+    }
+    restartLogin.bind(this)
     let myheaders = {
       Authorization: `Basic ${basicBase64}`,
       'Content-Type': 'application/json'
@@ -124,12 +143,15 @@ class App extends Component {
           return response.body.getReader().read()
         },
         function (error) {
-          console.log(error.message)
+          alert(error.message + '\nAre you connected to the RESS servers?')
+          restartLogin()
+          return false
         }
       )
       .then(data => new TextDecoder('utf-8').decode(data.value))
       .then(newString => this.saveUserData(newString))
   }
+
   saveUserData = data => {
     let newData = data.slice(1, -1)
     let items = newData.replace('"roles":{', '')

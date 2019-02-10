@@ -22,11 +22,11 @@ export default class ParentPayment extends Component {
       datasets: [
         {
           label: 'Payments By this Parent',
-          backgroundColor: 'rgba(255,99,132,0.2)',
-          borderColor: 'rgba(255,99,132,1)',
+          backgroundColor: 'rgba(255,255,255,0.5)',
+          borderColor: 'rgba(255,255,255,1)',
           borderWidth: 1,
           hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-          hoverBorderColor: 'rgba(255,99,132,1)',
+          hoverBorderColor: 'rgba(196,213,221,1)',
           data: this.getdata()
         }
       ]

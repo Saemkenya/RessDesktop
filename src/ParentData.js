@@ -43,10 +43,6 @@ export default class SchoolParents extends React.Component {
   render () {
     return (
       <div>
-        <div className='dtc v-mid pl3'>
-          <h1 className='f6 f5-ns fw6 lh-title white mv0'>Payments </h1>
-        </div>
-
         <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
           {({ data, loading }) => {
             if (loading) {
@@ -56,7 +52,7 @@ export default class SchoolParents extends React.Component {
           }}
         </Query>
         <div className='dtc v-mid pl3'>
-          <h1 className='f6 f5-ns fw6 lh-title white mv0'>Students </h1>
+          <div className='f6 f5-ns fw6 lh-title white mv0'>Students Of This Parent</div>
         </div>
 
         <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
