@@ -13,7 +13,7 @@ included with a `bearer` authorization flag. Apollo client is heavily used for t
 4. Tutor
 5. Manager
 6. Student
- 
+
 ### Application
 
 Uses react-apollo to interact with the RESS graphql backend
@@ -42,17 +42,19 @@ Package a production build with
 ### Roles menu
 
 1. Registry {
-   Guardians | Students | Departments | Subjects | Grades | Lessons | Timetable | Exams | Scores
+   Guardians | Tutors | Students | Departments | Subjects | Grades | Lessons | Timetable | Exams | Scores
    }
 2. Accountant {
-   Guardians | Students | Fess Structure | Payments
+   Guardians | Tutors | Librarians | Students | Fess Structure | Payments
    }
 3. Librarian {
    Students | Books
    }
 4. Tutor {
-   Students | Departments | Subjects | Grades | Lessons | Timetable | Books | Exams | Scores
+   Tutors | Students | Departments | Subjects | Grades | Lessons | Timetable | Books | Exams | Scores
    }
-5. Manager { School }
-6. Student { Subjects | Lessons | Timetable | Books | Exams | Scores }
+5. Manager { Guardians | Accountants | Registrars | Librarians | Tutors | Students | School |
+   Departments | Subjects | Grades | Lessons | Timetable | Exams | Scores
+   FeeStructure | Payments | Books }
+6. Student { Students | Subjects | Lessons | Timetable | Books | Exams | Scores }
 7. Admin { Schools }

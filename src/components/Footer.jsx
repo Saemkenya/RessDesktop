@@ -7,7 +7,7 @@ class Footer extends Component {
       <Fragment>
         <div className='scroll-right-text'>Student Login</div>
         <div className='scroll-right-text'>
-          Connection Status:<span> Connected ...</span>
+          Status:<span> Connected ...</span>
         </div>
         <div className='scroll-right-text'>
           Notifications: <span>No New Notifications ...</span>
@@ -15,7 +15,7 @@ class Footer extends Component {
         <div className='scroll-right-text'>
           Suggestion Box: <span>No New Messages ...</span>
         </div>
-        <div className='scroll-right-text'>SignOut: {this.props.email}</div>
+        <div className='scroll-right-text'>{this.props.email}</div>
         <div className='scroll-right-text'>{this.props.roles.map(role => '  ' + role)}</div>
       </Fragment>
     )

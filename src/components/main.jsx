@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Nav from '../Nav'
 import SchoolData from '../SchoolData'
 import ScoreGraph from '../ScoreGraph'
 import PaymentGraph from '../PaymentGraph'
@@ -8,7 +7,6 @@ import ParentTable from './ParentTable'
 import StudentTable from './StudentTable'
 import DeptGraph from '../DeptsGraph'
 import GradeTable from './GradeTable'
-import BookGraph from '../BookGraph'
 import FeeTable from './FeeTable'
 import ExamTable from './ExamTable'
 import SubjectTable from './SubjectTable'
@@ -41,7 +39,9 @@ import SignInData from '../SigInData'
 import Footer from './Footer'
 import LessonTable from './LessonTable'
 import TimeTable from './Tt'
-import BookTable from './BookTable';
+import BookTable from './BookTable'
+
+import Nav from '../Nav'
 
 class Main extends Component {
   render () {
@@ -100,7 +100,7 @@ class Main extends Component {
             </Switch>
           </div>
           <div className='body-header-footer scroll-right'>
-            <Footer roles={this.props.roles} />
+            <Footer roles={this.props.roles} email={this.props.email}/>
           </div>
         </div>
       </div>
