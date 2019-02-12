@@ -2,7 +2,6 @@ import React from 'react'
 import moment from 'moment'
 import './calendar.css'
 
-
 export default class Calendar extends React.Component {
   state = {
     dateContext: moment(),
@@ -14,9 +13,9 @@ export default class Calendar extends React.Component {
 
   constructor (props) {
     super(props)
-    this.width = '100%'
+    this.width = '680px' // props.width ||
     this.style = props.style || {}
-    this.style.width = this.width // add this
+    // this.style.width = this.width // add this
   }
 
   weekdays = moment.weekdays() // ["Sunday", "Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday"]
@@ -206,8 +205,8 @@ export default class Calendar extends React.Component {
 
     let daysInMonth = []
     for (let d = 1; d <= this.daysInMonth(); d++) {
-      let className = d == this.currentDay() ? 'day current-day' : 'day'
-      let selectedClass = d == this.state.selectedDay ? ' selected-day ' : ''
+      let className = d === this.currentDay() ? 'day current-day' : 'day'
+      let selectedClass = d === this.state.selectedDay ? ' selected-day ' : ''
       daysInMonth.push(
         <td key={d} className={className + selectedClass}>
           <span

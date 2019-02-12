@@ -49,10 +49,20 @@ class App extends Component {
 
   componentDidMount () {
     this.setState({ token: sessionStorage.getItem('token') })
+    this.setState({ name: sessionStorage.getItem('name') })
+    this.setState({ response: sessionStorage.getItem('response') })
+    this.setState({ accRole: sessionStorage.getItem('accRole') })
+    this.setState({ admRole: sessionStorage.getItem('admRole') })
+    this.setState({ gdnRole: sessionStorage.getItem('gdnRole') })
+    this.setState({ libRole: sessionStorage.getItem('libRole') })
+    this.setState({ mngRole: sessionStorage.getItem('mngRole') })
+    this.setState({ tutRole: sessionStorage.getItem('tutRole') })
+    this.setState({ regRole: sessionStorage.getItem('regRole') })
+    this.setState({ email: sessionStorage.getItem('email') })
   }
 
-  setToken = token => {
-    sessionStorage.setItem('token', token)
+  setToken = (token, name) => {
+    sessionStorage.setItem(name, token)
     this.setState({ token })
   }
 
@@ -93,7 +103,7 @@ class App extends Component {
       <ApolloProvider client={apolloClient}>
         <BrowserRouter>
           {token ? (
-            <Main roles={this.rendeRoles()} email={this.state.email} />
+            <Main roles={this.rendeRoles()} email={this.state.name} />
           ) : (
             <SignIn
               onSignIn={this.handleSignIn}
@@ -177,7 +187,18 @@ class App extends Component {
       regRole: this.setRole(items[9]),
       token: items[11].slice(1, -1)
     })
-    this.setToken(items[11].slice(1, -1))
+
+    this.setToken(this.state.accRole, 'accRole')
+    this.setToken(this.state.admRole, 'admRole')
+    this.setToken(this.state.gdnRole, 'gdnRole')
+    this.setToken(this.state.libRole, 'libRole')
+    this.setToken(this.state.mngRole, 'mngRole')
+    this.setToken(this.state.tutRole, 'tutRole')
+    this.setToken(this.state.regRole, 'regRole')
+    this.setToken(this.state.response, 'response')
+    this.setToken(this.state.name, 'name')
+    this.setToken(this.state.email, 'email')
+    this.setToken(items[11].slice(1, -1), 'token')
   }
   setRole = roleString => {
     if (roleString.includes('true')) {
