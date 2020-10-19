@@ -46,7 +46,7 @@ export default class BookTable extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <Query query={SCHOOL_BOOKS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+          <Query query={SCHOOL_BOOKS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
             {({ data, loading }) => {
               if (loading) {
                 return <span>Loading...</span>
@@ -87,7 +87,7 @@ export default class BookTable extends React.Component {
           </div>
           </article>
 
-        <Query query={SCHOOL_BOOKS_QUERY} variables={{ email: "silverbull@187.guru" }}>
+        <Query query={SCHOOL_BOOKS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>;

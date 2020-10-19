@@ -41,7 +41,7 @@ export default class SubjectData extends Component {
         <DeptGraph />
         <div>Subject Tutors</div>
         <article className='dt w-100 bb b--black-05 pb2 mt2' href='#0'>
-          <Query query={SCHOOL_SUBJECTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+          <Query query={SCHOOL_SUBJECTS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
             {({ data, loading }) => {
               if (loading) {
                 return <span>Loading...</span>

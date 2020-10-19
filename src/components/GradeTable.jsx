@@ -47,7 +47,7 @@ export default class GradeTable extends Component {
               </tr>
             </thead>
             <tbody>
-              <Query query={SCHOOL_GRADES_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+              <Query query={SCHOOL_GRADES_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
                 {({ data, loading }) => {
                   if (loading) {
                     return <span>Loading...</span>

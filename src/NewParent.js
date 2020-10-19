@@ -151,7 +151,7 @@ export default class NewParent extends React.Component {
                     className="pa2 input-reset ba bg-white w-100 measure" 
                     type="text" 
                     name="P.O. Box"  
-                    id="AddrPoBox" 
+                    id="addrPoBox" 
                     value={ this.state.addr_poBox }
                     placeholder="P.O. Box number ..."
                     onChange={ (e) => this.setState({
@@ -164,7 +164,7 @@ export default class NewParent extends React.Component {
                     className="pa2 input-reset ba bg-white w-100 measure" 
                     type="text" 
                     name="Postal Code"  
-                    id="AddrPostalCode" 
+                    id="addrPostalCode" 
                     value={ this.state.addr_postalCode }
                     placeholder="Postal code ..."
                     onChange={ (e) => this.setState({
@@ -177,7 +177,7 @@ export default class NewParent extends React.Component {
                     className="pa2 input-reset ba bg-white w-100 measure" 
                     type="text" 
                     name="Postal Town"  
-                    id="AddrTown" 
+                    id="addrTown" 
                     value={ this.state.addr_town }
                     placeholder="Town ..."
                     onChange={ (e) => this.setState({
@@ -190,7 +190,7 @@ export default class NewParent extends React.Component {
                     className="pa2 input-reset ba bg-white w-100 measure" 
                     type="text" 
                     name="County"  
-                    id="AddrCounty" 
+                    id="addrCounty" 
                     value={ this.state.addr_county }
                     placeholder="County ..."
                     onChange={ (e) => this.setState({
@@ -203,7 +203,7 @@ export default class NewParent extends React.Component {
                     className="pa2 input-reset ba bg-white w-100 measure" 
                     type="text" 
                     name="Nationality"  
-                    id="AddrNationality" 
+                    id="addrNationality" 
                     value={ this.state.addr_nationality }
                     placeholder="Nationality ..."
                     onChange={ (e) => this.setState({

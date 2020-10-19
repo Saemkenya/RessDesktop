@@ -60,7 +60,7 @@ export default class SubjectTable extends Component {
               </tr>
             </thead>
             <tbody>
-              <Query query={SCHOOL_SUBJECTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+              <Query query={SCHOOL_SUBJECTS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
                 {({ data, loading }) => {
                   if (loading) {
                     return <span>Loading...</span>

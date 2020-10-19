@@ -10,11 +10,11 @@ const SCHOOL_QUERY = gql`
       motto
       email
       website
-      AddrPoBox
-      AddrPostalCode
-      AddrTown
-      AddrCounty
-      AddrCountry
+      addrPoBox
+      addrPostalCode
+      addrTown
+      addrCounty
+      addrCountry
     }
   }
 `
@@ -56,12 +56,12 @@ export default class SchoolData extends React.Component {
   render () {
     return (
       <Fragment>
-        <Query query={SCHOOL_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>
             }
-            // console.log(data)
+            console.log(data)
             return (
               <div className='main-body-header' onClick={this.toggleNav}>
                 <span className='btn-toggle-nav' />

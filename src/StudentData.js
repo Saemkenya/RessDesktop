@@ -69,7 +69,7 @@ export default class StudentData extends React.Component {
             <h1 className='f6 f5-ns fw6 lh-title white mv0'>Student's Guardians </h1>
           </div>
         </article>
-        <Query query={SCHOOL_STUDENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_STUDENTS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>
@@ -78,7 +78,7 @@ export default class StudentData extends React.Component {
           }}
         </Query>
 
-        <Query query={SCHOOL_STUDENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_STUDENTS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>

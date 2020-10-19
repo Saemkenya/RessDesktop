@@ -39,7 +39,7 @@ export default class GradeData extends React.Component {
             <h1 className='f6 f5-ns fw6 lh-title white mv0'>Students of this grade </h1>
           </div>
         </article>
-        <Query query={SCHOOL_GRADES_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_GRADES_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>

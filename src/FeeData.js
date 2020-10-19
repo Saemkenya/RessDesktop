@@ -49,7 +49,7 @@ export default class FeeData extends React.Component {
           </div>
           </article>
 
-        <Query query={SCHOOL_FEES_QUERY} variables={{ email: "silverbull@187.guru" }}>
+        <Query query={SCHOOL_FEES_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>;

@@ -43,7 +43,7 @@ export default class SchoolParents extends React.Component {
   render () {
     return (
       <div>
-        <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>
@@ -55,7 +55,7 @@ export default class SchoolParents extends React.Component {
           <div className='f6 f5-ns fw6 lh-title white mv0'>Students Of This Parent</div>
         </div>
 
-        <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_PARENTS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>

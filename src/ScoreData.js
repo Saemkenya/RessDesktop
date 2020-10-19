@@ -63,7 +63,7 @@ export default class ScoreData extends React.Component {
           </div>
           </article>
 
-        <Query query={SCHOOL_SCORES_QUERY} variables={{ email: "silverbull@187.guru" }}>
+        <Query query={SCHOOL_SCORES_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>;

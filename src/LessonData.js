@@ -68,7 +68,7 @@ export default class LessonData extends React.Component {
           </div>
         </article>
 
-        <Query query={SCHOOL_LESSONS_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+        <Query query={SCHOOL_LESSONS_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
           {({ data, loading }) => {
             if (loading) {
               return <span>Loading...</span>

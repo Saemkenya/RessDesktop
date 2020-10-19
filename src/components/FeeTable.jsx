@@ -39,7 +39,7 @@ export default class FeeTable extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <Query query={SCHOOL_FEES_QUERY} variables={{ email: 'silverbull@187.guru' }}>
+          <Query query={SCHOOL_FEES_QUERY} variables={{ email: sessionStorage.getItem("school") }}>
             {({ data, loading }) => {
               if (loading) {
                 return <span>Loading...</span>
